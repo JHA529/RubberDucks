@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Us</title>
+  <style>
+    /* Your existing styles... */
+  </style>
+</head>
+<body>
+  <div class="carousel-container">
+    <!-- Your carousel code... -->
+  </div>
+
+  <div class="content-container">
+    <div class="left-half">
+      <img class="left-image" src="background-image.jpg" alt="Left Picture">
+    </div>
+    <div class="right-half" id="rightImagesContainer">
+      <img class="single-image" src="abous pic\45d8274b-7c99-4191-aec7-7fc0dbb04c1d.jpg" alt="Right Picture 1">
+      <img class="single-image" src="abous pic\4272a43b-733f-4848-a055-6b3543609c8b.jpg" alt="Right Picture 2">
+    </div>
+  </div>
+
+  <script>
+    const rightImagesContainer = document.getElementById("rightImagesContainer");
+    const rightImages = rightImagesContainer.querySelectorAll(".single-image");
+    let currentImageIndex = 0;
+
+    function changeRightImage() {
+      rightImages[currentImageIndex].classList.remove("visible");
+      currentImageIndex = (currentImageIndex + 1) % rightImages.length;
+      rightImages[currentImageIndex].classList.add("visible");
+    }
+
+    setInterval(changeRightImage, 3000); // Change image every 3 seconds (3000 milliseconds)
+  </script>
+</body>
+</html>
