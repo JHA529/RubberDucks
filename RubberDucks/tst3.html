@@ -3,7 +3,7 @@
 
 <head>
 
-  <title>About Us</title>
+  <title>Bookings</title>
 
   <style>
     
@@ -19,7 +19,7 @@
     .changing-image img {
       width: 100%; /* Make the image fill the container */
       height: px; /* Set a specific height for all images */
-      object-fit: cover; /* Zoom out the images while maintaining aspect ratio */
+      /* object-fit: cover; /* Zoom out the images while maintaining aspect ratio  */
     }
 
 
@@ -246,54 +246,78 @@
         </div>
 
       </div>
-
-    </body>
-    <body>
-
+<body>
+<body>
+    <form action="" method="post" >
+        dish <input type="text" name = "dish"> <br>
+        event name <input type="text" name = "eventname"> <br>
+        event date <input type="date" name = "eventdate"> <br>
+          <input type="submit">
+        </form>
+</body>
+   
+    <div class="menu">
+      <h2>Main packages (prices per head)</h2>
+      <ul>
+        <li><a href="/checkout/Chicken" class="item-ink">Chicken - £13.50 (bbq, jerk fried)</a></li>                      
+        <li><a href="#">Jerk pork - £13.50</a></li>               
+        <li><a href="#">Oxtail - £15.50</a></li>
+        <li><a href="#">Goat - £14.50</a></li>
+        <li><a href="#">Fish - £14.00</a></li>
+        <li><a href="#">Veg/vegan - £13.50</a></li>
+      </ul>
+    
+      <h2>Extra Mains</h2>
+      <ul>
+        <li><a href="#">Jerk lamb - £2</a></li>
+        <li><a href="#">Prawns - £2</a></li>
+        <li><a href="#">Jerk pork - £1</a></li>
+     
+      </ul>
+    
+      <h2>Extra Sides</h2>
+      <ul>
+        <li><a href="#">Plain rice- 25p</a></li>
+        <li><a href="#">Rice and peas- 35p</a></li>
+        <li><a href="#">Saffron rice- 35p</a></li>
+       
+      </ul>
+    
+      <h2>Soup</h2>
+      <ul>
+        <li><a href="#">Red Pea - £2.00 (Meat options available)</a></li>
+        <li><a href="#">Chicken - £2.50</a></li>
+        <li><a href="#">Veg - £1.50</a></li>
+     </ul>
+       <h2>Drinks/desserts</h2>
+      <ul>
+        <li><a href="#">Rum punch - £100 (7 litre keg)</a></li>
+        <li><a href="#">Guinness punch £60 - (7 litre keg)</a></li>
+        <li><a href="#">Carrot juice £40 - (7 litre keg)</a></li>
       
+      </ul>
+    </div>
+    
 
-      <div class="image-container">
-        <div class="static-image">
-          <img src="wedding2.jpg" width="1000" height="600" alt="Logo">
-          <div class="overlay-text">Welcome to Pure Satizfaktion!
-
-            Since our inception in November 2021, we've been passionately crafting culinary experiences that celebrate the vibrant flavors of the Caribbean. Founded by a young black married couple with a shared vision, our journey is one that we're excited to share with you.
-            
-            With a family of seven, including our five wonderful kids, we understand the importance of creating memorable moments around the table. Our recipes are not only a reflection of our cultural heritage but also a testament to the love and dedication we pour into every dish.
-            
-            At Pure Satizfaktion, we pride ourselves on delivering exceptional taste and authenticity in every bite. Our commitment to quality ingredients, traditional techniques, and innovative twists ensures that each event we cater becomes a unique and unforgettable experience. Not only do we pride ourselves on delivering exceptional taste, but we also provide outstanding customer service from start to finish.
-            
-            Join us as we continue to infuse the warmth of the Caribbean into your celebrations, creating a feast that not only satisfies the palate but also brings people together.
-            
-            Thank you for being a part of our journey – we look forward to serving you with passion, flavor, and a touch of island magic.
-            
-            Feel free to use this formatted text as part of your website or promotional materials. If you have any specific formatting preferences or requirements, please let me know, and I'll be happy to assist further!</div>
-        </div>
-        <div class="changing-image">
-          <img src="about us pics\wedding2.jpg" alt="Changing Image" id="changingImage">
-        </div>
-      </div>
     
-      <script>
-        
-        const changingImage = document.getElementById('changingImage');
-        const imagePaths = [
-          "wedding.jpg",
-          "Wedding2.jpg",
-          "manfood1.jpg",
-          "servingfood.jpg"
-          
-        ];
-        let currentIndex = 0;
-    
-        function changeImage() {
-          currentIndex = (currentIndex + 1) % imagePaths.length;
-          changingImage.src = imagePaths[currentIndex];
-        }
-    
-        setInterval(changeImage, 3000); // Change image every 3 seconds
-      </script>
     </body>
+     <!-- Shopping Basket -->
+     <div class="shopping-basket">
+        <h2>Shopping Basket</h2>
+        <ul>
+          {% for product_id, quantity in session['basket'].items() %}
+            <li>{{ product_id }} - Quantity: {{ quantity }}</li>
+          {% endfor %}
+        </ul>
+        <a href="/checkout">Checkout</a>
+      </div>
+    </div>
+  
+    
+
+
+
+    </body> 
 
     <footer>
 
@@ -318,4 +342,3 @@
 </body>
 
 </html>
-

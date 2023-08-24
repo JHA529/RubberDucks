@@ -127,6 +127,104 @@ body, html {
             
   /* Your existing styles... */
 
+  /* below is styles for about us page  */
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  .image-container {
+    display: flex;
+  }
+  
+  .static-image {
+    flex: 1;
+  }
+  
+  .changing-image {
+    flex: 1;
+    position: relative;
+  }
+  
+  /* .changing-image img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover; */
+  /* } */
+  
+  
+  /*text overlay aboout us page   */
+  .overlay-text {
+    position: absolute;
+    top: 31%;
+    left: 0;
+    width: 52.2%; /* Adjust the width to cover only the left half */
+    height: 70%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    font-size: 24px; /* Adjust the font size */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif; /* Choose a font that looks good */
+  }
+  
+  
+/* place order menu on right side */
+.menu {
+  background-color: #020101;
+  padding: 20px;
+  width: 50%; /* Adjust the width for half of the screen */
+  position: fixed;
+  top: 20;
+  right: 0;
+  height: 60vh;
+  overflow-y: auto; /* Enable scrolling if content exceeds container height */
+  box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1); /* Add a shadow to the left */
+  color: rgb(101, 125, 28); /* Change the text colour of title in menu */
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Change the font family */
+}
+
+.menu h2 {
+  margin-top: 5px;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  width: 100%; /*container */
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color:green;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgb(241, 230, 26);
+
+  
+  
+}
+/* menu list items */
+.item-ink {
+  color: rgb(255, 239, 18); /* Or any other color you prefer */
+  font-family: 'Times New Roman', Times, serif; /* Change the font family */
+}
 
 
-              
+.background-picture {
+  background-image: url('Menu.jpg');
+  background-size: 71% 71%; /* Stretch the width, maintain aspect ratio */
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

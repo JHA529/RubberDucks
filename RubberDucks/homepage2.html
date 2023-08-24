@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Home Page</title>
+  <style>
+    /* Your existing CSS code */
+  </style>
+</head>
+
+<body>
+  <div class="carousel-container">
+    <!-- Your carousel code here -->
+  </div>
+
+  <div class="main-container">
+    <header>
+      <nav>
+        <div class="logo">
+          <h1>Pure Satizfaktion</h1>
+        </div>
+        <ul>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Bookings</a></li>
+          <li><a href="Aboutus_pz.html">About Us</a></li>
+        </ul>
+      </nav>
+      <img src="bw logo.png" width="200" height="120">
+    </header>
+
+    <div class="image-container">
+      <div class="static-image">
+        <img src="logos/logo.jpg" alt="Static Image">
+      </div>
+      <div class="changing-image">
+        <img src="abous pic/wedding2.jpg" alt="Changing Image" id="changingImage">
+      </div>
+    </div>
+
+    <script>
+      const changingImage = document.getElementById('changingImage');
+      const imagePaths = [
+        "abous pic/wedding2.jpg",
+        "abous pic/wedding.jpg"
+        // Add more image paths here
+      ];
+      let currentIndex = 0;
+
+      function changeImage() {
+        currentIndex = (currentIndex + 1) % imagePaths.length;
+        changingImage.src = imagePaths[currentIndex];
+      }
+
+      setInterval(changeImage, 3000); // Change image every 3 seconds
+    </script>
+
+    <!-- ... Rest of your HTML code ... -->
+
+    <footer>
+      <div class="contact-bar">
+        <a href="mailto:puresatizfaktion@gmail.com">Email: puresatizfaktion@gmail.com</a>
+        <span>|</span>
+        <a href="https://www.instagram.com/pure_satizfaktion/"><img src="instalogo.jpg" width="30" height="30" alt="Instagram"></a>
+        <span>|</span>
+        <a href="tel:07506 606643">Phone: 07506 606643</a>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
+
+      
