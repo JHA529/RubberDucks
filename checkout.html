@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pure Satizfaktion</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: rgb(30, 30, 30);
+      overflow: hidden;
+    }
+
+    .carousel-container {
+      position: relative;
+      width: 100vw;
+      height: 20vh;
+      overflow: hidden;
+      background-color: rgb(27, 26, 26);
+    }
+
+    .carousel-slider {
+      display: flex;
+      animation: rotate 10s linear infinite;
+    }
+
+    .carousel-slide {
+      width: 25vw;
+      height: 20vh;
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .carousel-slide img {
+      width: 50%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    .contact-bar {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    .contact-bar a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .contact-bar a:hover {
+      text-decoration: underline;
+    }
+
+    /* New styles for the form */
+    .form-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    .form-container input {
+      margin: 10px;
+      padding: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="carousel-container">
+    <div class="carousel-slider">
+      <div class="carousel-slide">
+        <img src="Carousel img/food1.jpg" alt="Image 1">
+      </div>
+      <div class="carousel-slide">
+        <img src="Carousel img/food2.jpg" alt="Image 2">
+      </div>
+      <div class="carousel-slide">
+        <img src="Carousel img/food3.jpg" alt="Image 3">
+      </div>
+      <div class="carousel-slide">
+        <img src="Carousel img/food4.jpg" alt="Image 4">
+      </div>
+    </div>
+  </div>
+
+  <div class="main-container">
+    <header>
+      <nav>
+        <div class="logo">
+          <meta charset="UTF-8">
+
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+          <link rel="stylesheet" href="styles.css">
+          <h1>Pure Satizfaktion</h1>
+        </div>
+        <ul>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Bookings</a></li>
+          <li><a href="Aboutus_pz.html">About Us</a></li>
+        </ul>
+      </nav>
+      <img src="bw logo.png" width="200" height="120">
+    </header>
+
+    <div class="social-links">
+      <!-- Your existing social links code -->
+    </div>
+<!-- trail coe -->
+
+<!-- trail coe above -->
+    <!-- Form code starts here -->
+    <div class="form-container">
+      <form action="" method="post">
+        <label for="dishInput">Dish:</label>
+        <input type="text" name="dish" id="dishInput"> <br>
+        <label for="eventNameInput">Event Name:</label>
+        <input type="text" name="eventname" id="eventNameInput"> <br>
+        <label for="eventDateInput">Event Date:</label>
+        <input type="date" name="eventdate" id="eventDateInput"> <br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+    <!-- Form code ends here -->
+
+    <footer>
+      <div class="contact-bar">
+        <a href="mailto:puresatizfaktion@gmail.com">Email: puresatizfaktion@gmail.com</a>
+        <span>|</span>
+        <a href="https://www.instagram.com/pure_satizfaktion/"><img src="instalogo.jpg" width="30" height="30"
+            alt="Instagram"></a>
+        <span>|</span>
+        <a href="tel:07506 606643">Phone: 07506 606643</a>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

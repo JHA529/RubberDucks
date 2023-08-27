@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Bookings</title>
+
+  <style>
+  .changing-image {
+      width: 30%; /* Adjust the width as needed */
+      height: auto; /* Maintain aspect ratio */
+      position: absolute;
+      right: 0;
+      top: 0px; /* Adjust the top position as needed */
+      overflow: hidden;
+    }
+
+    .changing-image img {
+      width: 100%; /* Make the image fill the container */
+      height: px; /* Set a specific height for all images */
+      /* object-fit: cover; /* Zoom out the images while maintaining aspect ratio  */
+    }
+
+
+    body {
+
+      margin: 0;
+
+      background-color: rgb(30, 30, 30);
+
+      overflow: hidden;
+
+    }
+
+ 
+
+    .carousel-container {
+
+      position: relative;
+
+      width: 100vw;
+
+      height: 20vh;
+
+      overflow: hidden;
+
+      background-color: rgb(27, 26, 26);
+
+    }
+
+ 
+
+    .carousel-slider {
+
+      display: flex;
+
+      animation: rotate 10s linear infinite;
+
+    }
+
+ 
+
+    .carousel-slide {
+
+      width: 25vw;
+
+      height: 20vh;
+
+      flex-shrink: 0;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+    }
+
+ 
+
+    .carousel-slide img {
+
+      width: 50%;
+
+      height: auto;
+
+      object-fit: cover;
+
+      border-radius: 50%;
+
+    }
+
+ 
+
+    @keyframes rotate {
+
+      0% {
+
+        transform: translateX(0%);
+
+      }
+
+      100% {
+
+        transform: translateX(-100%);
+
+      }
+
+    }
+
+ 
+
+    .contact-bar {
+
+      background-color: #333;
+
+      color: #fff;
+
+      text-align: center;
+
+      padding: 10px 0;
+
+      position: fixed;
+
+      bottom: 0;
+
+      left: 0;
+
+      width: 100%;
+
+    }
+
+ 
+
+    .contact-bar a {
+
+      color: #fff;
+
+      text-decoration: none;
+
+      margin: 0 10px;
+
+    }
+
+ 
+
+    .contact-bar a:hover {
+
+      text-decoration: underline;
+
+    }
+
+
+  </style>
+</head>
+
+<body>
+
+  <div class="carousel-container">
+    <!-- Your carousel code here -->
+    <div class="carousel-container">
+
+      <div class="carousel-slider">
+  
+        <div class="carousel-slide">
+  
+          <img src="Carousel img/food1.jpg" alt="Image 1">
+  
+        </div>
+  
+        <div class="carousel-slide">
+  
+          <img src="Carousel img/food2.jpg" alt="Image 2">
+  
+        </div>
+  
+        <div class="carousel-slide">
+  
+          <img src="Carousel img/food3.jpg" alt="Image 3">
+  
+        </div>
+  
+        <div class="carousel-slide">
+  
+          <img src="Carousel img/food4.jpg" alt="Image 4">
+  
+        </div>
+  
+        
+  
+      </div>
+  
+    </div>
+  </div>
+
+  <div class="main-container">
+    <head>
+      <!-- Your header navigation code here -->
+      <meta charset="UTF-8">
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link rel="stylesheet" href="styles.css">
+
+      <title>Pure Satizfaktion</title>
+    </head>
+    <header>
+
+      <nav>
+
+        <div class="logo">
+
+          <h1>Pure Satizfaktion</h1>
+
+        </div>
+
+        <ul>
+
+          <li><a href="#">Menu</a></li>
+
+          <li><a href="#">Events</a></li>
+
+          <li><a href="#">Bookings</a></li>
+
+          <li><a href="Home_PZ.html">Home</a></li>
+
+        </ul>
+
+      </nav>
+
+      <img src="logos\bw logo.png" width="200" height="120">
+
+    </header>
+
+    <div class="social-links">
+
+      
+
+    </div>
+
+  </div>
+   
+      
+    </div>
+
+    <form action="" method="post" id="orderForm">
+      <div id="dishesContainer">
+        <div class="dish-order">
+          Please select your order and submit form to request a quote.   <input type="text" name="dish[]" id="dishInput" class="dishInput">
+          <br>
+        </div>
+      </div> 
+
+      <!-- <form action="" method="post" > -->
+        Your Name <input type="text" name = "firstname"> <br>
+        Number of Guest <input type="text" name = "lastname"> <br>
+        Email <input type="text" name = "email"> <br>
+          <!-- <input type="submit"> -->
+      
+       Event Address <input type="text" name="eventname"> <br> 
+
+     Event date <input type="date" name="eventdate"> <br>
+      <input type="submit" value="Submit">
+    </form>
+
+    <!-- May need to put this back  -->
+
+    <div class="menu">
+      <ul id="dishList">
+        <li class="dish-item"></li>
+        <h2>Main Dish</h2>
+        <li><a href="C:\code\RubberDucks\checkout.html/addtobasket/Fried Jerk Chicken" li class="dish-item"></li>>Fried Jerk Chicken - £13.50 </a></li>
+        <li><a href="C:\code\RubberDucks\checkout.html/addtobasket/Fried BBQ Chicken" li class="dish-item"></li>>Fried BBQ Chicken - £13.50 </a></li>
+        <li><a href="C:\code\RubberDucks\checkout.html/addtobasket/Fried Jerk Pork" li class="dish-item"></li>>Fried Jerk Pork - £13.50 </a></li> 
+        <li><a href="C:\code\RubberDucks\checkout.html/addtobasket/Fried BBQ Pork" li class="dish-item"></li>>Fried BBQ Pork - £13.50  </a></li>
+        <li><a href="C:\code\RubberDucks\checkout.html/addtobasket/Oxtail - £15.50" li class="dish-item"></li>>Oxtail - £15.50  </a></li> 
+        <li><a href="C:\code\RubberDucks\checkout.html/addtobasket/Goat" li class="dish-item"></li>>Goat - £14.50  </a></li>
+        <li><a href="C:\code\RubberDucks\checkout.html/addtobasket/Fish" li class="dish-item"></li>>Fish - £14.00  </a></li> 
+        <li><a href="C:\code\RubberDucks\checkout.html/addtobasket/Veg-Vegan" li class="dish-item"></li>>Veg/Vegan - £13.50   </a></li>    
+                  <!--changed the name of chicken and beef dish will they still work with database?  -->
+
+      </ul>
+    
+      </ul>
+      <div>
+
+      <div>
+        <h2></h2>
+      </div>
+      
+      <ul> <h2>Extra Mains</h2>
+        <li><a href="C:\code\RubberDucks\checkout.html/addtobasket/Jerk Lamb" li class="dish-item"></li>>Jerk Lamb - £2.00 </a></li> 
+        <li><a href="C:\code\RubberDucks\checkout.html/addtobasket/Prawns" li class="dish-item"></li>>Prawns - £2.00  </a></li>
+        <li><a href="C:\code\RubberDucks\checkout.html/addtobasket/Jerk Pork" li class="dish-item"></li>>Jerk Pork - £1.00 </a></li>
+        
+     
+      </ul>
+      <h2>Extra Sides</h2>
+      <ul>
+        <li><a href="C:\code\RubberDucks\checkout.html/addtobasket/Plain Rice" li class="dish-item"></li>>Plain Rice - 25p </a></li>
+        <li><a href="C:\code\RubberDucks\checkout.html/addtobasket/Rice and Peas" li class="dish-item"></li>>Rice and Peas - 35p </a></li>
+        <li><a href="C:\code\RubberDucks\checkout.html/addtobasket/Saffron Rice" li class="dish-item"></li>>Saffron Rice - 35p </a></li>
+       
+       
+      </ul>
+      <h2>Soup</h2>
+      <ul>
+        <li><a href="C:\code\RubberDucks\checkout.html/addtobasket/Red Pea Soup" li class="dish-item"></li>>Red Pea Soup - £2.00 </a></li>
+        <li><a href="C:\code\RubberDucks\checkout.html/addtobasket/Chicken Soup" li class="dish-item"></li>>Chicken Soup - £2.50 </a></li>
+        <li><a href="C:\code\RubberDucks\checkout.html/addtobasket/Veg Soup" li class="dish-item"></li>>Veg Soup- £1.50 </a></li>
+
+        
+       
+     </ul>
+     <h2>Drinks/desserts</h2>
+     <ul>
+      <li><a href="C:\code\RubberDucks\checkout.html/addtobasket/Red Punch" li class="dish-item"></li>>Red Punch (7 ltr keg) - £100 </a></li>
+      <li><a href="C:\code\RubberDucks\checkout.html/addtobasket/Guiness Punch" li class="dish-item"></li>>Guiness Punch - £60 </a></li>
+      <li><a href="C:\code\RubberDucks\checkout.html/addtobasket/Carrot Juice" li class="dish-item"></li>>Carrot Juice - £40 </a></li>
+
+
+
+     
+     </ul>
+    </div>
+
+    <footer>
+      <div class="contact-bar">
+        <a href="mailto:puresatizfaktion@gmail.com">Email: puresatizfaktion@gmail.com</a>
+        <span>|</span>
+        <a href="https://www.instagram.com/pure_satizfaktion/"><img src="instalogo.jpg" width="30" height="30" alt="Instagram"></a>
+        <span>|</span>
+        <a href="tel:07506 606643">Phone: 07506 606643</a>
+      </div>
+    </footer>
+  </div>
+  <script>
+  
+  
+    //  handling clicked dish items
+    const dishInput = document.getElementById("dishInput");
+    const dishItems = document.querySelectorAll(".dish-item");
+    const dishesContainer = document.getElementById("dishesContainer");
+  
+    dishItems.forEach(item => {
+      item.addEventListener("click", () => {
+        if (dishInput.value.trim() === "") {
+          dishInput.value = item.textContent;
+        } else {
+          dishInput.value += ", " + item.textContent;
+        }
+  
+        // Display ordered dishes in a structured format
+        const orderedDishes = dishInput.value.split(", ");
+        dishesContainer.innerHTML = "";
+        orderedDishes.forEach(dish => {
+          const dishOrder = document.createElement("div");
+          dishOrder.className = "dish-order";
+          dishOrder.textContent = dish;
+          dishesContainer.appendChild(dishOrder);
+        });
+  
+        dishInput.placeholder = ""; // Clear placeholder text
+      });
+    });
+  </script>
+  
+</body>
+</html>

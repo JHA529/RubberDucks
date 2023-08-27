@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bookings</title>
+  <style>
+    /* Your existing styles */
+
+    /* Add the style for displaying ordered dishes */
+    .dish-order {
+      border: 1px solid #ccc;
+      padding: 5px 10px;
+      margin-bottom: 5px;
+      background-color: #f7f7f7;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="carousel-container">
+    <!-- Your carousel code here -->
+    <!-- ... (carousel code) -->
+  </div>
+
+  <div class="main-container">
+    <header>
+      <!-- Your header navigation code here -->
+      <!-- ... (header code) -->
+    </header>
+
+    <div class="social-links">
+      <!-- ... (social links) -->
+    </div>
+
+    <form action="" method="post" id="orderForm">
+      <div id="dishesContainer">
+        <!-- This container will display ordered dishes -->
+      </div>
+      <div class="dish-order">
+        <label for="dishInput">Ordered dishes:</label>
+        <input type="text" name="dish[]" id="dishInput" class="dishInput" readonly>
+      </div>
+      <br>
+      Event name <input type="text" name="eventname"> <br>
+      Event date <input type="date" name="eventdate"> <br>
+      <input type="submit" value="Submit">
+    </form>
+
+    <div class="menu">
+      <!-- ... (menu items) -->
+    </div>
+
+    <footer>
+      <div class="contact-bar">
+        <a href="mailto:puresatizfaktion@gmail.com">Email: puresatizfaktion@gmail.com</a>
+        <span>|</span>
+        <a href="https://www.instagram.com/pure_satizfaktion/"><img src="instalogo.jpg" width="30" height="30" alt="Instagram"></a>
+        <span>|</span>
+        <a href="tel:07506 606643">Phone: 07506 606643</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Your existing scripts
+  
+    // Combined JavaScript code for handling clicked dish items and displaying ordered dishes
+    const dishInput = document.getElementById("dishInput");
+    const dishItems = document.querySelectorAll(".dish-item");
+    const dishesContainer = document.getElementById("dishesContainer");
+  
+    dishItems.forEach(item => {
+      item.addEventListener("click", () => {
+        if (dishInput.value.trim() === "") {
+          dishInput.value = item.textContent;
+        } else {
+          dishInput.value += ", " + item.textContent;
+        }
+  
+        // Display ordered dishes in a structured format
+        const orderedDishes = dishInput.value.split(", ");
+        dishesContainer.innerHTML = "";
+        orderedDishes.forEach(dish => {
+          const dishOrder = document.createElement("div");
+          dishOrder.className = "dish-order";
+          dishOrder.textContent = dish;
+          dishesContainer.appendChild(dishOrder);
+        });
+  
+        dishInput.placeholder = ""; // Clear placeholder text
+      });
+    });
+  </script>
+</body>
+</html>
